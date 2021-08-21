@@ -192,7 +192,7 @@ Building a cross-chain bridge is a way to connect to the Polkadot ecosystem.
 
 Creating a cross-chain bridge means that the tokens move between chains or protocols, but in reality it’s all about a smart contract that burns tokens on one chain and minted them on the other.
 
-### ATTENTION!** To confirm any transaction, the contract requires a signature from a subset of validators.
+### ATTENTION! To confirm any transaction, the contract requires a signature from a subset of validators.
 
 Now let’s build our relay bridge from Ethereum to Polkadot. To build our project we will use !ink because it is the main language for smart contracts on Substrate. Alternatively you could use Rust.
 
