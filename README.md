@@ -16,10 +16,10 @@ To facilitate parachain development, Polkadot provides two PDK (Parachain Develo
 The first working and available PDK is called Substrate and the second Cumulus.
 
 >The basic tool set for the development of the polkadot parachain consists of:
-* SUBSTRATE (newest version)
-* SOURCE CODE POLKADOT
-* WASM INTERPRETER AND WASM COMPILER
-* ROCOCÒ
+> SUBSTRATE (newest version)
+> SOURCE CODE POLKADOT
+> WASM INTERPRETER AND WASM COMPILER
+> ROCOCÒ
 
 The first step for development is to set the version of the Substrate framework.
 The best way is to use Parity Knowledge Base.
