@@ -24,11 +24,11 @@ The first step for development is to set the version of the Substrate framework.
 The best way is to use Parity Knowledge Base.
 As soon as the environment is ready, you can start editing the code of the parachain model.
 
-   '''
+
 #![cfg_attr(not(feature = "std"), no_std)]
 #![recursion_limit = "256"]
 
-// Make the WASM binary available.
+    // Make the WASM binary available.
 #[cfg(feature = "std")]
 include!(concat!(env!("OUT_DIR"), "/wasm_binary.rs"));
 
@@ -39,13 +39,13 @@ use sp_runtime::{
 	ApplyExtrinsicResult,
 };
 
-///Place for additional imports
+    ///Place for additional imports
 
 impl_opaque_keys! {
 	pub struct SessionKeys {}
 }
 
-/// This runtime version.
+    /// This runtime version.
 pub const VERSION: RuntimeVersion = RuntimeVersion {
 	spec_name: create_runtime_str!("blaize-test-project"),
 	impl_name: create_runtime_str!("blaize-test-project"),
@@ -57,10 +57,10 @@ pub const VERSION: RuntimeVersion = RuntimeVersion {
 };
 
 impl frame_system::Trait for Runtime {
-    /// Place for main trait interface
+     // Place for main trait interface
 }
 
-//Place for additional custom traits declarations
+     //Place for additional custom traits declarations
 
 impl cumulus_parachain_upgrade::Trait for Runtime {
 	type Event = Event;
@@ -69,7 +69,7 @@ impl cumulus_parachain_upgrade::Trait for Runtime {
 
 impl parachain_info::Trait for Runtime {}
 
-/// Configure the pallet template in pallets/template.
+     /// Configure the pallet template in pallets/template.
 impl template::Trait for Runtime {
 	type Event = Event;
 }
@@ -89,7 +89,7 @@ construct_runtime! {
 }
 
 impl_runtime_apis! {
-    ///Traits implementation
+       ///Traits implementation
 }
 
 cumulus_runtime::register_validate_block!(Block, Executive);
@@ -115,7 +115,7 @@ The basic toolkit for developing dApp polkadot consists of:
 Substrate FRAME is a code library that stores ready-made modules. 
 To create a decentralized app on top of it, you need to combine the modules chosen in the framework runtime.
 
-ATTENTION! To enable smart contract functionality we should add a pallet _contracts pallet.
+#ATTENTION! To enable smart contract functionality we should add a pallet _contracts pallet.
 
 impl pallet_contracts::Trait for Runtime {
     type Time = Timestamp;
@@ -144,7 +144,7 @@ impl_runtime_apis! {
         for Runtime
     {
         fn call_the_contract(
-            origin: AccountId,  ///Contract caller (may be another contract)
+            origin: AccountId,   ///Contract caller (may be another contract)
             dest: AccountId,    ///Contract address
             value: Balance,     ///Analogue of Eth message.value
             gas_limit: u64,
@@ -173,7 +173,7 @@ Instead, if you’ve chosen Substrate FRAME, it’s better to use an Edgeware Sm
 
 Building a cross-chain bridge is a way to connect to the Polkadot ecosystem. Creating a cross-chain bridge means that the tokens move between chains or protocols, but in reality it’s all about a smart contract that burns tokens on one chain and minted them on the other.
 
-ATTENTION! To confirm any transaction, the contract requires a signature from a subset of validators.
+#ATTENTION! To confirm any transaction, the contract requires a signature from a subset of validators.
 
 Now let’s build our relay bridge from Ethereum to Polkadot. To build our project we will use ! ink because it is the main language for smart contracts on Substrate. Alternatively you could use Rust.
 
