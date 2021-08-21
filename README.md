@@ -96,9 +96,9 @@ impl_runtime_apis! {
 cumulus_runtime::register_validate_block!(Block, Executive);
 ```
 
-* Substrate contains all the modules and frames needed for independent chain development, but does not have the required compatibility functionality with Polkadot. * So you need to start using the Cumulus library.
-* Cumulus will add to the library the parachain code required when importing a substrate-based chain. 
-* This makes the chain compatible with the Polkadot environment.
+Substrate contains all the modules and frames needed for independent chain development, but does not have the required compatibility functionality with Polkadot.  So you need to start using the Cumulus library.
+Cumulus will add to the library the parachain code required when importing a substrate-based chain. 
+This makes the chain compatible with the Polkadot environment.
 
 If you got here, great, now you need ROCOCÒ. Because you will have to check your parachain, in fact the testnet ROCOCÒ, has been created to meet/test all the specifications required.
 
@@ -139,8 +139,8 @@ impl pallet_contracts::Trait for Runtime {
     type WeightPrice = pallet_transaction_payment::Module<Self>;
 }
 ```
- For customization, we can add all necessary imports and dependencies. 
- We can either add more custom pallets or develop custom strokes within this pallet and start configuration.
+_ For customization, we can add all necessary imports and dependencies. 
+_ We can either add more custom pallets or develop custom strokes within this pallet and start configuration.
 
   ```
 impl_runtime_apis! {
@@ -168,23 +168,23 @@ impl_runtime_apis! {
 }
 ```
   
-* To deploy smart contracts for your dApp, there are two leading solutions (Moonbeam and Edgeware) both offering smart contracts running through the Polkadot environment.
+To deploy smart contracts for your dApp, there are two leading solutions (Moonbeam and Edgeware) both offering smart contracts running through the Polkadot environment.
 
-* If you’ve chosen the EVM Substrate pallet, a Moonbeam smart contract solution is better. 
-* In which an interoperable layer containing the current Ethereum toolbox called Frontier is used. Moonbeam will support all contracts written for the EVM environment.
+If you’ve chosen the EVM Substrate pallet, a Moonbeam smart contract solution is better. 
+In which an interoperable layer containing the current Ethereum toolbox called Frontier is used. Moonbeam will support all contracts written for the EVM environment.
 
-*Instead, if you’ve chosen Substrate FRAME, it’s better to use an Edgeware Smart Contract solution. 
-*It’s a substrate-based chain that will connect to the relay chain.
-*Thanks to its compilation in WASM it allows the execution of smart contracts.
+Instead, if you’ve chosen Substrate FRAME, it’s better to use an Edgeware Smart Contract solution. 
+It’s a substrate-based chain that will connect to the relay chain.
+Thanks to its compilation in WASM it allows the execution of smart contracts.
   
 **# CREATE A CROSS-CHAIN BRIDGE ON POLKADOT **
 
-* Building a cross-chain bridge is a way to connect to the Polkadot ecosystem. 
-* Creating a cross-chain bridge means that the tokens move between chains or protocols, but in reality it’s all about a smart contract that burns tokens on one chain and minted them on the other.
+Building a cross-chain bridge is a way to connect to the Polkadot ecosystem. 
+Creating a cross-chain bridge means that the tokens move between chains or protocols, but in reality it’s all about a smart contract that burns tokens on one chain and minted them on the other.
 
 **## ATTENTION!** To confirm any transaction, the contract requires a signature from a subset of validators.
 
-* Now let’s build our relay bridge from Ethereum to Polkadot. To build our project we will use !ink because it is the main language for smart contracts on Substrate. Alternatively you could use Rust.
+Now let’s build our relay bridge from Ethereum to Polkadot. To build our project we will use !ink because it is the main language for smart contracts on Substrate. Alternatively you could use Rust.
 
 The basic set of tools for the development of the bridge consists of:
 * INTELLIGENT CONTRACTS
