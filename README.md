@@ -1,7 +1,7 @@
 # How-to-launch-a-project-on-polkadot
 In this tutorial I will explain how to develop and launch your dApp project on Polkadot.
 
-**#WHY TO BUILD ONE DAPP ON POLKADOT?**
+**# WHY TO BUILD ONE DAPP ON POLKADOT?**
 
 Polkadot is a fast-growing ecosystem that enables cross-chain communication within its parachains. This interoperability and scalability will take blockchain technology to a new level; solving current problems such as high transition fees, rigid forks and low TPS.
 
