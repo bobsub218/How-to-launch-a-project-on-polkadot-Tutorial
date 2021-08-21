@@ -139,8 +139,8 @@ impl pallet_contracts::Trait for Runtime {
     type WeightPrice = pallet_transaction_payment::Module<Self>;
 }
 ```
-* For customization, we can add all necessary imports and dependencies. 
-* We can either add more custom pallets or develop custom strokes within this pallet and start configuration.
+ For customization, we can add all necessary imports and dependencies. 
+ We can either add more custom pallets or develop custom strokes within this pallet and start configuration.
 
   ```
 impl_runtime_apis! {
@@ -232,11 +232,11 @@ pub fn request_swap(&mut self, transfer_info: SwapMessage) {
     }
 }
   ```
-* Keep in mind that to interact with both sides of the bridge and the smart contracts on it, you’ll need a dApp.
-* This is how the end user will transfer funds from one chain to another.
+ Keep in mind that to interact with both sides of the bridge and the smart contracts on it, you’ll need a dApp.
+ This is how the end user will transfer funds from one chain to another.
 
 **# CONCLUSION **
 
-* In this tutorial we’ve seen how to build a parachain on Polkadot and use a substrate-based chain to create a dApp.
-* In addition, we also saw the design/construction process of a cross-chain bridge between Ethereum and Polkadot.
-* I hope that after reading this tutorial you have understood how you can join the Polkadot world and build into it.
+ In this tutorial we’ve seen how to build a parachain on Polkadot and use a substrate-based chain to create a dApp.
+ In addition, we also saw the design/construction process of a cross-chain bridge between Ethereum and Polkadot.
+ I hope that after reading this tutorial you have understood how you can join the Polkadot world and build into it.
