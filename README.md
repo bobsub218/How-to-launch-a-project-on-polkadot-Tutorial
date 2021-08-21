@@ -12,7 +12,7 @@ In this tutorial I will explain how to develop and launch your dApp project on P
 For the creation of a parachain it is necessary to know the substrate.
 Substrate and polkadot are written in Rust. As a result, it is possible to implement parachain development in Rust.
 
-To facilitate parachain development, Polkadot provides two PDKs (Parachain Development Kit). 
+To facilitate parachain development, Polkadot provides two PDK (Parachain Development Kit). 
 The first working and available PDK is called Substrate and the second Cumulus.
 
 The basic tool set for the development of the polkadot parachain consists of:
@@ -139,8 +139,9 @@ impl pallet_contracts::Trait for Runtime {
     type WeightPrice = pallet_transaction_payment::Module<Self>;
 }
 ```
-For customization, we can add all necessary imports and dependencies. 
-We can either add more custom pallets or develop custom strokes within this pallet and start configuration.
+* For customization, we can add all necessary imports and dependencies. 
+* We can either add more custom pallets or develop custom strokes within this pallet and start configuration.
+
   ```
 impl_runtime_apis! {
     impl pallet_contracts_rpc_runtime_api::ContractsApi<Block, AccountId, Balance, BlockNumber>
@@ -172,8 +173,9 @@ impl_runtime_apis! {
 * If you’ve chosen the EVM Substrate pallet, a Moonbeam smart contract solution is better. 
 * In which an interoperable layer containing the current Ethereum toolbox called Frontier is used. Moonbeam will support all contracts written for the EVM environment.
 
-Instead, if you’ve chosen Substrate FRAME, it’s better to use an Edgeware Smart Contract solution. 
-It’s a substrate-based chain that will connect to the relay chain. Thanks to its compilation in WASM it allows the execution of smart contracts.
+*Instead, if you’ve chosen Substrate FRAME, it’s better to use an Edgeware Smart Contract solution. 
+*It’s a substrate-based chain that will connect to the relay chain.
+*Thanks to its compilation in WASM it allows the execution of smart contracts.
   
 **# CREATE A CROSS-CHAIN BRIDGE ON POLKADOT **
 
@@ -182,16 +184,16 @@ It’s a substrate-based chain that will connect to the relay chain. Thanks to i
 
 **## ATTENTION!** To confirm any transaction, the contract requires a signature from a subset of validators.
 
-Now let’s build our relay bridge from Ethereum to Polkadot. To build our project we will use ! ink because it is the main language for smart contracts on Substrate. Alternatively you could use Rust.
+* Now let’s build our relay bridge from Ethereum to Polkadot. To build our project we will use !ink because it is the main language for smart contracts on Substrate. Alternatively you could use Rust.
 
 The basic set of tools for the development of the bridge consists of:
 * INTELLIGENT CONTRACTS
 * SUBSTRATE PALLET (use relayer pallets)
 * CONVALIDATION PROGRAMME
 
-*In the development of the bridge an important part is the validation program, which should take into account the parameter analyzing the number of validators (relays). Another important parameter is the threshold for validators.
-*The threshold is the limit of validators needed to approve the transaction. 
-*By setting the threshold function it is possible to specify the exact amount of funds that can be transferred from one side to the other per day.
+* In the development of the bridge an important part is the validation program, which should take into account the parameter analyzing the number of validators (relays). Another important parameter is the threshold for validators.
+* The threshold is the limit of validators needed to approve the transaction. 
+* By setting the threshold function it is possible to specify the exact amount of funds that can be transferred from one side to the other per day.
 
 Example of validation method for approval of cross-chain transactions:
 ```
@@ -230,11 +232,11 @@ pub fn request_swap(&mut self, transfer_info: SwapMessage) {
     }
 }
   ```
-Keep in mind that to interact with both sides of the bridge and the smart contracts on it, you’ll need a dApp.
-This is how the end user will transfer funds from one chain to another.
+* Keep in mind that to interact with both sides of the bridge and the smart contracts on it, you’ll need a dApp.
+* This is how the end user will transfer funds from one chain to another.
 
 **# CONCLUSION **
 
-In this tutorial we’ve seen how to build a parachain on Polkadot and use a substrate-based chain to create a dApp.
-In addition, we also saw the design/construction process of a cross-chain bridge between Ethereum and Polkadot.
-I hope that after reading this tutorial you have understood how you can join the Polkadot world and build into it.
+* In this tutorial we’ve seen how to build a parachain on Polkadot and use a substrate-based chain to create a dApp.
+* In addition, we also saw the design/construction process of a cross-chain bridge between Ethereum and Polkadot.
+* I hope that after reading this tutorial you have understood how you can join the Polkadot world and build into it.
