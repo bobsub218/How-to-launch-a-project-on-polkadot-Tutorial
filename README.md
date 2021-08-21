@@ -12,9 +12,10 @@ In this tutorial I will explain how to develop and launch your dApp project on P
 For the creation of a parachain it is necessary to know the substrate.
 Substrate and polkadot are written in Rust. As a result, it is possible to implement parachain development in Rust.
 
-To facilitate parachain development, Polkadot provides two PDKs (Parachain Development Kit). The first working and available PDK is called Substrate and the second Cumulus.
+To facilitate parachain development, Polkadot provides two PDKs (Parachain Development Kit). 
+The first working and available PDK is called Substrate and the second Cumulus.
 
-* The basic tool set for the development of the polkadot parachain consists of:
+The basic tool set for the development of the polkadot parachain consists of:
 * SUBSTRATED (newest version)
 * SOURCE CODE POLKADOT
 * WASM INTERPRETER AND WASM COMPILER
@@ -102,22 +103,22 @@ If you got here, great, now you need ROCOCÒ. Because you will have to check you
 
 After your parachain passes the testnet exam, you will need a parachain slot to distribute it and connect to the Relay chain.
 
-#DEVELOPING A DAPP ON POLKADOT WITH SUBSTRATE
+**#DEVELOPING A DAPP ON POLKADOT WITH SUBSTRATE**
 
 For creating the dApp for polkadot we will use FRAME Substrates because of the
 its wide use.
 
 The basic toolkit for developing dApp polkadot consists of:
-- SUBSTRATED (newest version)
-- RUST
-- !INK
-- WASM INTERPRETER AND COMPILER WASM
+*SUBSTRATED (newest version)
+*RUST
+*!INK
+*WASM INTERPRETER AND COMPILER WASM
 
 Substrate FRAME is a code library that stores ready-made modules. 
 To create a decentralized app on top of it, you need to combine the modules chosen in the framework runtime.
 
-#ATTENTION! To enable smart contract functionality we should add a pallet _contracts pallet.
-
+**##ATTENTION!** To enable smart contract functionality we should add a pallet _contracts pallet.
+```
 impl pallet_contracts::Trait for Runtime {
     type Time = Timestamp;
     type Randomness = RandomnessCollectiveFlip;
@@ -136,10 +137,10 @@ impl pallet_contracts::Trait for Runtime {
     type MaxValueSize = pallet_contracts::DefaultMaxValueSize;
     type WeightPrice = pallet_transaction_payment::Module<Self>;
 }
-
+```
 For customization, we can add all necessary imports and dependencies. 
 We can either add more custom pallets or develop custom strokes within this pallet and start configuration.
-  
+  ```
 impl_runtime_apis! {
     impl pallet_contracts_rpc_runtime_api::ContractsApi<Block, AccountId, Balance, BlockNumber>
         for Runtime
@@ -163,6 +164,7 @@ impl_runtime_apis! {
             }
         }
 }
+```
   
 To deploy smart contracts for your dApp, there are two leading solutions (Moonbeam and Edgeware) both offering smart contracts running through the Polkadot environment.
 
@@ -170,25 +172,25 @@ If you’ve chosen the EVM Substrate pallet, a Moonbeam smart contract solution 
 
 Instead, if you’ve chosen Substrate FRAME, it’s better to use an Edgeware Smart Contract solution. It’s a substrate-based chain that will connect to the relay chain. Thanks to its compilation in WASM it allows the execution of smart contracts.
   
-#CREATE A CROSS-CHAIN BRIDGE ON POLKADOT
+**#CREATE A CROSS-CHAIN BRIDGE ON POLKADOT**
 
 Building a cross-chain bridge is a way to connect to the Polkadot ecosystem. Creating a cross-chain bridge means that the tokens move between chains or protocols, but in reality it’s all about a smart contract that burns tokens on one chain and minted them on the other.
 
-#ATTENTION! To confirm any transaction, the contract requires a signature from a subset of validators.
+**##ATTENTION!** To confirm any transaction, the contract requires a signature from a subset of validators.
 
 Now let’s build our relay bridge from Ethereum to Polkadot. To build our project we will use ! ink because it is the main language for smart contracts on Substrate. Alternatively you could use Rust.
 
 The basic set of tools for the development of the bridge consists of:
-- INTELLIGENT CONTRACTS
-- SUBSTRATE PALLET (use relayer pallets)
-- CONVALIDATION PROGRAMME
+*INTELLIGENT CONTRACTS
+*SUBSTRATE PALLET (use relayer pallets)
+*CONVALIDATION PROGRAMME
 
 In the development of the bridge an important part is the validation program, which should take into account the parameter analyzing the number of validators (relays). Another important parameter is the threshold for validators.
 The threshold is the limit of validators needed to approve the transaction. 
 By setting the threshold function it is possible to specify the exact amount of funds that can be transferred from one side to the other per day.
 
 Example of validation method for approval of cross-chain transactions:
-
+```
 // Validator method
 #[ink(message)]
 pub fn request_swap(&mut self, transfer_info: SwapMessage) {
@@ -223,11 +225,11 @@ pub fn request_swap(&mut self, transfer_info: SwapMessage) {
         }
     }
 }
-  
+  ```
 Keep in mind that to interact with both sides of the bridge and the smart contracts on it, you’ll need a dApp.
 This is how the end user will transfer funds from one chain to another.
 
-#CONCLUSION
+**#CONCLUSION**
 
 In this tutorial we’ve seen how to build a parachain on Polkadot and use a substrate-based chain to create a dApp.
 In addition, we also saw the design/construction process of a cross-chain bridge between Ethereum and Polkadot.
