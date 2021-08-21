@@ -139,8 +139,8 @@ impl pallet_contracts::Trait for Runtime {
     type WeightPrice = pallet_transaction_payment::Module<Self>;
 }
 ```
-_ For customization, we can add all necessary imports and dependencies. 
-_ We can either add more custom pallets or develop custom strokes within this pallet and start configuration.
+ For customization, we can add all necessary imports and dependencies. 
+ We can either add more custom pallets or develop custom strokes within this pallet and start configuration.
 
   ```
 impl_runtime_apis! {
