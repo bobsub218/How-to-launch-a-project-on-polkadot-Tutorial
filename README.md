@@ -7,18 +7,18 @@ Polkadot is a fast-growing ecosystem that enables cross-chain communication with
 
 In this tutorial I will explain how to develop and launch your dApp project on Polkadot.
 
-#BUILDING A PARACHAIN FOR POLKADOT
+**#BUILDING A PARACHAIN FOR POLKADOT**
 
 For the creation of a parachain it is necessary to know the substrate.
 Substrate and polkadot are written in Rust. As a result, it is possible to implement parachain development in Rust.
 
 To facilitate parachain development, Polkadot provides two PDKs (Parachain Development Kit). The first working and available PDK is called Substrate and the second Cumulus.
 
-The basic tool set for the development of the polkadot parachain consists of:
+*The basic tool set for the development of the polkadot parachain consists of:
 - SUBSTRATED (newest version)
 - SOURCE CODE POLKADOT
 - WASM INTERPRETER AND WASM COMPILER
-- ROCOCÒ
+- ROCOCÒ*
 
 The first step for development is to set the version of the Substrate framework.
 The best way is to use Parity Knowledge Base.
