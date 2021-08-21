@@ -251,5 +251,6 @@ pub fn request_swap(&mut self, transfer_info: SwapMessage) {
 ## CONCLUSION 
 
  In this tutorial we’ve seen how to build a parachain on Polkadot and use a substrate-based chain to create a dApp.
+ 
  In addition, we also saw the design/construction process of a cross-chain bridge between Ethereum and Polkadot.
  I hope that after reading this tutorial you have understood how you can join the Polkadot world and build into it.
