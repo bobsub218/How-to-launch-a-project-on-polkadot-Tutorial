@@ -15,7 +15,7 @@ Substrate and polkadot are written in Rust. As a result, it is possible to imple
 To facilitate parachain development, Polkadot provides two PDK (Parachain Development Kit). 
 The first working and available PDK is called Substrate and the second Cumulus.
 
-The basic tool set for the development of the polkadot parachain consists of:
+>The basic tool set for the development of the polkadot parachain consists of:
 * SUBSTRATE (newest version)
 * SOURCE CODE POLKADOT
 * WASM INTERPRETER AND WASM COMPILER
