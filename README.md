@@ -16,9 +16,9 @@ To facilitate parachain development, Polkadot provides two PDKs (Parachain Devel
 
 _The basic tool set for the development of the polkadot parachain consists of:
 - SUBSTRATED (newest version)
-- SOURCE CODE POLKADOT
-- WASM INTERPRETER AND WASM COMPILER
-- ROCOCÒ_
+_- SOURCE CODE POLKADOT_
+_- WASM INTERPRETER AND WASM COMPILER_
+_- ROCOCÒ_
 
 The first step for development is to set the version of the Substrate framework.
 The best way is to use Parity Knowledge Base.
