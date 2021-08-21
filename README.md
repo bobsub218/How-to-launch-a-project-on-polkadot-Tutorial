@@ -40,13 +40,13 @@ use sp_runtime::{
 	ApplyExtrinsicResult,
 };
 
-    ///Place for additional imports
+    //Place for additional imports
 
 impl_opaque_keys! {
 	pub struct SessionKeys {}
 }
 
-    /// This runtime version.
+    // This runtime version.
 pub const VERSION: RuntimeVersion = RuntimeVersion {
 	spec_name: create_runtime_str!("blaize-test-project"),
 	impl_name: create_runtime_str!("blaize-test-project"),
@@ -70,7 +70,7 @@ impl cumulus_parachain_upgrade::Trait for Runtime {
 
 impl parachain_info::Trait for Runtime {}
 
-     /// Configure the pallet template in pallets/template.
+     // Configure the pallet template in pallets/template.
 impl template::Trait for Runtime {
 	type Event = Event;
 }
@@ -90,14 +90,15 @@ construct_runtime! {
 }
 
 impl_runtime_apis! {
-       ///Traits implementation
+       //Traits implementation
 }
 
 cumulus_runtime::register_validate_block!(Block, Executive);
 ```
 
 Substrate contains all the modules and frames needed for independent chain development, but does not have the required compatibility functionality with Polkadot. So you need to start using the Cumulus library.
-Cumulus will add to the library the parachain code required when importing a substrate-based chain. This makes the chain compatible with the Polkadot environment.
+Cumulus will add to the library the parachain code required when importing a substrate-based chain. 
+This makes the chain compatible with the Polkadot environment.
 
 If you got here, great, now you need ROCOCÒ. Because you will have to check your parachain, in fact the testnet ROCOCÒ, has been created to meet/test all the specifications required.
 
@@ -146,9 +147,9 @@ impl_runtime_apis! {
         for Runtime
     {
         fn call_the_contract(
-            origin: AccountId,   ///Contract caller (may be another contract)
-            dest: AccountId,    ///Contract address
-            value: Balance,     ///Analogue of Eth message.value
+            origin: AccountId,   //Contract caller (may be another contract)
+            dest: AccountId,    //Contract address
+            value: Balance,    //Analogue of Eth message.value
             gas_limit: u64,
             input_data: Vec<u8>,
         ) -> ContractExecResult {
@@ -174,7 +175,8 @@ Instead, if you’ve chosen Substrate FRAME, it’s better to use an Edgeware Sm
   
 **#CREATE A CROSS-CHAIN BRIDGE ON POLKADOT**
 
-Building a cross-chain bridge is a way to connect to the Polkadot ecosystem. Creating a cross-chain bridge means that the tokens move between chains or protocols, but in reality it’s all about a smart contract that burns tokens on one chain and minted them on the other.
+Building a cross-chain bridge is a way to connect to the Polkadot ecosystem. 
+Creating a cross-chain bridge means that the tokens move between chains or protocols, but in reality it’s all about a smart contract that burns tokens on one chain and minted them on the other.
 
 **##ATTENTION!** To confirm any transaction, the contract requires a signature from a subset of validators.
 
