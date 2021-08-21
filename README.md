@@ -24,7 +24,7 @@ The first step for development is to set the version of the Substrate framework.
 The best way is to use Parity Knowledge Base.
 As soon as the environment is ready, you can start editing the code of the parachain model.
 
-
+```
 #![cfg_attr(not(feature = "std"), no_std)]
 #![recursion_limit = "256"]
 
@@ -93,6 +93,7 @@ impl_runtime_apis! {
 }
 
 cumulus_runtime::register_validate_block!(Block, Executive);
+```
 
 Substrate contains all the modules and frames needed for independent chain development, but does not have the required compatibility functionality with Polkadot. So you need to start using the Cumulus library.
 Cumulus will add to the library the parachain code required when importing a substrate-based chain. This makes the chain compatible with the Polkadot environment.
