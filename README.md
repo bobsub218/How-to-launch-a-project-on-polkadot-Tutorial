@@ -1,13 +1,13 @@
 # How-to-launch-a-project-on-polkadot
 In this tutorial I will explain how to develop and launch your dApp project on Polkadot.
 
-**##  WHY TO BUILD ONE DAPP ON POLKADOT?**
+##  WHY TO BUILD ONE DAPP ON POLKADOT?**
 
 Polkadot is a fast-growing ecosystem that enables cross-chain communication within its parachains. This interoperability and scalability will take blockchain technology to a new level; solving current problems such as high transition fees, rigid forks and low TPS.
 
 In this tutorial I will explain how to develop and launch your dApp project on Polkadot.
 
-**# BUILDING A PARACHAIN FOR POLKADOT**
+## BUILDING A PARACHAIN FOR POLKADOT**
 
 For the creation of a parachain it is necessary to know the substrate.
 
@@ -112,7 +112,7 @@ If you got here, great, now you need ROCOCÒ. Because you will have to check you
 
 After your parachain passes the testnet exam, you will need a parachain slot to distribute it and connect to the Relay chain.
 
-**# DEVELOPING A DAPP ON POLKADOT WITH SUBSTRATE **
+## DEVELOPING A DAPP ON POLKADOT WITH SUBSTRATE **
 
 For creating the dApp for polkadot we will use FRAME Substrates because of the its wide use.
 
@@ -186,7 +186,7 @@ Instead, if you’ve chosen Substrate FRAME, it’s better to use an Edgeware Sm
 It’s a substrate-based chain that will connect to the relay chain.
 Thanks to its compilation in WASM it allows the execution of smart contracts.
   
-**# CREATE A CROSS-CHAIN BRIDGE ON POLKADOT **
+## CREATE A CROSS-CHAIN BRIDGE ON POLKADOT **
 
 Building a cross-chain bridge is a way to connect to the Polkadot ecosystem. 
 
@@ -248,7 +248,7 @@ pub fn request_swap(&mut self, transfer_info: SwapMessage) {
  
  This is how the end user will transfer funds from one chain to another.
 
-**# CONCLUSION **
+## CONCLUSION **
 
  In this tutorial we’ve seen how to build a parachain on Polkadot and use a substrate-based chain to create a dApp.
  In addition, we also saw the design/construction process of a cross-chain bridge between Ethereum and Polkadot.
