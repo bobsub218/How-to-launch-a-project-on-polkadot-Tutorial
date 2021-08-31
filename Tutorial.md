@@ -20,7 +20,7 @@ In this tutorial we will build a Parachain, dApp and a cross-chain bridge and to
 * Rococo 
 * Polkadot source code
 * Rust
-* !Ink
+* !Ink https://github.com/thesephist/ink
 
 # Body of Tutorial
 
