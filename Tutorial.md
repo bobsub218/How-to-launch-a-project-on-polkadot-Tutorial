@@ -124,7 +124,7 @@ Cumulus will add to the library the parachain code required when importing a sub
 
 This makes the chain compatible with the Polkadot environment.
 
-If you got here, great, now you need ROCOCÒ. Because you will have to check your parachain, in fact the testnet ROCOCÒ, has been created to meet/test all the specifications required.
+If you got here, great, now you need ROCOCO. Because you will have to check your parachain, in fact the testnet ROCOCO, has been created to meet/test all the specifications required.
 
 After your parachain passes the testnet exam, you will need a parachain slot to distribute it and connect to the Relay chain.
 
