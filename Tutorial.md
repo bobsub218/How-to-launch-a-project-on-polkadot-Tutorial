@@ -18,6 +18,8 @@ In questo tutorial costruiremo una Parachain, dApp e un cross-chain bridge e per
 * Wasm interepreter and Compiler to Wasm https://github.com/paritytech/wasmi
 * Rococo 
 * Polkadot source code
+* Rust
+* !Ink
 
 
 
