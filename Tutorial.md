@@ -3,18 +3,18 @@
 
 # Introduction
 
-Polkadot è un ecosistema in rapida crescita che consente la comunicazione cross-chain all'interno delle sue parachain. Questa interoperabilità e scalabilità porterà la tecnologia blockchain a un nuovo livello. E risolverà cosi una serie di problemi attuali come commissioni di transizione elevate, hard fork e TPS basso.
+Polkadot is a fast-growing ecosystem that enables cross-chain communication within its parachains. This interoperability and scalability will take blockchain technology to a new level. It will solve a number of current problems such as high transition fees, hard forks and low TPS.
 
-In questo tutorial ti spiegherò come sviluppare e lanciare il tuo progetto dApp su Polkadot.
+In this tutorial I will explain how to develop and launch your dApp project on Polkadot.
 
 # Prerequisites
 
-In questo tutorial costruiremo una Parachain, dApp e un cross-chain bridge e per creare tutto useremo differenti strumenti in differenti momenti.
+In this tutorial we will build a Parachain, dApp and a cross-chain bridge and to create everything we will use different tools at different times.
 
 # Requirements
 
 * Substrate https://github.com/paritytech/substrate
-* Guida per Substrate  https://substrate.dev/docs/en/knowledgebase/getting-started/
+* Guide for Substrate  https://substrate.dev/docs/en/knowledgebase/getting-started/
 * Wasm interepreter and Compiler to Wasm https://github.com/paritytech/wasmi
 * Rococo 
 * Polkadot source code
