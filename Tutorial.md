@@ -1,4 +1,37 @@
 # HOW TO LAUNCH A PROJECT ON POLKADOT 
 
 
+## Introduction
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
