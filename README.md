@@ -17,7 +17,7 @@ To facilitate parachain development, Polkadot provides two PDK (Parachain Develo
 
 The first working and available PDK is called Substrate and the second Cumulus.
 
-The basic tool set for the development of the polkadot parachain consists of:
+The basic tools set for the development of the polkadot parachain consists of:
 * SUBSTRATE (newest version)_
 * SOURCE CODE POLKADOT_
 * WASM INTERPRETER AND WASM COMPILER_
@@ -116,7 +116,7 @@ After your parachain passes the testnet exam, you will need a parachain slot to 
 
 For creating the dApp for polkadot we will use FRAME Substrates because of the its wide use.
 
-The basic toolkit for developing dApp polkadot consists of:
+The basic tools for developing dApp polkadot consists of:
 * SUBSTRATED (newest version)
 * RUST
 * !INK
@@ -196,7 +196,7 @@ Creating a cross-chain bridge means that the tokens move between chains or proto
 
 Now let’s build our relay bridge from Ethereum to Polkadot. To build our project we will use !ink because it is the main language for smart contracts on Substrate. Alternatively you could use Rust.
 
-The basic set of tools for the development of the bridge consists of:
+The basic tools of tools for the development of the bridge consists of:
 * INTELLIGENT CONTRACTS
 * SUBSTRATE PALLET (use relayer pallets)
 * CONVALIDATION PROGRAMME
