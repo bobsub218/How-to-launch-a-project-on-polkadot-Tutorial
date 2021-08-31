@@ -13,10 +13,11 @@ In questo tutorial costruiremo una Parachain, dApp e un cross-chain bridge e per
 
 ## Requirements
 
-                                                
-
-
-
+* Substrate https://github.com/paritytech/substrate
+* Guida per Substrate  https://substrate.dev/docs/en/knowledgebase/getting-started/
+* Wasm interepreter and Compiler to Wasm https://github.com/paritytech/wasmi
+* Rococo 
+* Polkadot source code
 
 
 
