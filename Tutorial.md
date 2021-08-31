@@ -212,7 +212,7 @@ Creating a cross-chain bridge means that the tokens move between chains or proto
 
 ### ATTENTION! To confirm any transaction, the contract requires a signature from a subset of validators.
 
-Now let’s build our relay bridge from Ethereum to Polkadot. To build our project we will use !ink because it is the main language for smart contracts on Substrate. Alternatively you could use Rust.
+Now let’s build our relay bridge from Ethereum to Polkadot. To build our project we will use !ink because it is the main language for smart contracts on Substrate. Alternatively you could use Rust(https://github.com/paritytech/parity-bridges-common).
 
 The basic tools of tools for the development of the bridge consists of:
 * INTELLIGENT CONTRACTS
