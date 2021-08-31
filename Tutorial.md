@@ -38,8 +38,8 @@ the second Cumulus(https://github.com/paritytech/cumulus).
 The basic tools set for the development of the polkadot parachain consists of:
 * SUBSTRATE (newest version)
 * SOURCE CODE POLKADOT
-* WASM INTERPRETER AND WASM COMPILER
-* ROCOCÒ
+* WASM INTERPRETER AND WASM COMPILER (https://github.com/paritytech/wasmi)
+* ROCOCO
 
 The first step for development is to set the version of the Substrate framework.
 
