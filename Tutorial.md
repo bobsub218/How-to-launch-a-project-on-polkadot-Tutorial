@@ -1,5 +1,6 @@
 # HOW TO LAUNCH A PROJECT ON POLKADOT 
 
+![Polkadot_logotype_color](https://user-images.githubusercontent.com/73669069/131570092-955d1346-5e72-4dd3-ad78-70e2b10352b1.jpg)
 
 # Introduction
 
