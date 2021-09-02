@@ -126,7 +126,7 @@ Substrate FRAME is a code library that stores ready-made modules.
 
 To create a decentralized app on top of it, you need to combine the modules chosen in the framework runtime.
 
-### ATTENTION! To enable smart contract functionality we should add a pallet _contracts pallet.
+**ATTENTION!** To enable smart contract functionality we should add a pallet _contracts pallet.
 ```
 impl pallet_contracts::Trait for Runtime {
     type Time = Timestamp;
@@ -192,7 +192,7 @@ Building a cross-chain bridge is a way to connect to the Polkadot ecosystem.
 
 Creating a cross-chain bridge means that the tokens move between chains or protocols, but in reality it’s all about a smart contract that burns tokens on one chain and minted them on the other.
 
-### ATTENTION! To confirm any transaction, the contract requires a signature from a subset of validators.
+**ATTENTION!** To confirm any transaction, the contract requires a signature from a subset of validators.
 
 Now let’s build our relay bridge from Ethereum to Polkadot. To build our project we will use !ink because it is the main language for smart contracts on Substrate. Alternatively you could use Rust.
 
@@ -244,7 +244,7 @@ pub fn request_swap(&mut self, transfer_info: SwapMessage) {
     }
 }
   ```
- Keep in mind that to interact with both sides of the bridge and the smart contracts on it, you’ll need a dApp.
+Keep in mind that to interact with both sides of the bridge and the smart contracts on it, you’ll need a dApp.
  
  This is how the end user will transfer funds from one chain to another.
 
