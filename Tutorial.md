@@ -262,9 +262,9 @@ pub fn request_swap(&mut self, transfer_info: SwapMessage) {
     }
 }
   ```
- Keep in mind that to interact with both sides of the bridge and the smart contracts on it, you’ll need a dApp.
+Keep in mind that to interact with both sides of the bridge and the smart contracts on it, you’ll need a dApp.
  
- This is how the end user will transfer funds from one chain to another.
+This is how the end user will transfer funds from one chain to another.
 
 # CONCLUSION 
 
