@@ -266,6 +266,8 @@ Keep in mind that to interact with both sides of the bridge and the smart contra
  
 This is how the end user will transfer funds from one chain to another.
 
+[Attached link for detailed files](https://github.com/bobsub218/How-to-launch-a-project-on-polkadot-Tutorial)
+
 # CONCLUSION 
 
 In this tutorial we’ve seen how to build a parachain on Polkadot and use a substrate-based chain to create a dApp.
