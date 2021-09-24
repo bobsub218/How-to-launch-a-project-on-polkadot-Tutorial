@@ -268,7 +268,7 @@ This is how the end user will transfer funds from one chain to another.
 
 [Attached link for detailed files](https://github.com/bobsub218/How-to-launch-a-project-on-polkadot-Tutorial)
 
-# CONCLUSION 
+# Conclusion
 
 In this tutorial we’ve seen how to build a parachain on Polkadot and use a substrate-based chain to create a dApp.
 In addition, we also saw the design/construction process of a cross-chain bridge between Ethereum and Polkadot.
