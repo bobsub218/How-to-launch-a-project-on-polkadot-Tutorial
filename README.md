@@ -27,11 +27,9 @@ In this tutorial we will build a Parachain, dApp and a cross-chain bridge and to
 
 For the creation of a parachain it is necessary to know the substrate.
 Substrate and polkadot are written in Rust and as a result it is possible to implement parachain development in Rust.
-
 Also, to facilitate parachain development, Polkadot provides two PDK (Parachain Development Kit). 
-
-The first working and available PDK is called Substrate(https://github.com/paritytech/substrate) and 
-the second Cumulus(https://github.com/paritytech/cumulus).
+The first working and available PDK is called [Substrate](https://github.com/paritytech/substrate) and 
+the second [Cumulus](https://github.com/paritytech/cumulus).
 
 The basic tools set for the development of the polkadot parachain consists of:
 * SUBSTRATE (newest version)
