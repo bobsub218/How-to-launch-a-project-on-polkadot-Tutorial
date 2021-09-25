@@ -27,10 +27,9 @@ In this tutorial we will build a Parachain, dApp and a cross-chain bridge and to
 ## BUILDING A PARACHAIN FOR POLKADOT
 
 For the creation of a parachain it is necessary to know the substrate.
+Substrate and polkadot are written in Rust and as a result it is possible to implement parachain development in Rust.
 
-Substrate and polkadot are written in Rust. As a result, it is possible to implement parachain development in Rust.
-
-To facilitate parachain development, Polkadot provides two PDK (Parachain Development Kit). 
+Also, to facilitate parachain development, Polkadot provides two PDK (Parachain Development Kit). 
 
 The first working and available PDK is called Substrate(https://github.com/paritytech/substrate) and 
 the second Cumulus(https://github.com/paritytech/cumulus).
@@ -41,13 +40,9 @@ The basic tools set for the development of the polkadot parachain consists of:
 * WASM INTERPRETER AND WASM COMPILER (https://github.com/paritytech/wasmi)
 * ROCOCO
 
-The first step for development is to set the version of the Substrate framework.
-
-The best way is to use Parity Knowledge Base.
-
+The first step for development is to set the version of the Substrate framework and the best way is to use Parity Knowledge Base.
 As soon as the environment is ready, you can start editing the code of the parachain model.
-
-```
+`
 #![cfg_attr(not(feature = "std"), no_std)]
 #![recursion_limit = "256"]
 
@@ -118,16 +113,11 @@ impl_runtime_apis! {
 cumulus_runtime::register_validate_block!(Block, Executive);
 ```
 
-Substrate contains all the modules and frames needed for independent chain development, but does not have the required compatibility functionality with Polkadot. 
+Substrate contains all the modules and frames needed for independent chain development, but does not have the required compatibility functionality with Polkadot. So you need to start using the Cumulus library.
 
-So you need to start using the Cumulus library.
-
-Cumulus will add to the library the parachain code required when importing a substrate-based chain. 
-
-This makes the chain compatible with the Polkadot environment.
+Cumulus will add to the library the parachain code required when importing a substrate-based chain and this will make the chain compatible with the Polkadot environment.
 
 If you got here, great, now you need ROCOCO. Because you will have to check your parachain, in fact the testnet ROCOCO, has been created to meet/test all the specifications required(https://polkadot.js.org/apps/?rpc=wss://rococo-rpc.polkadot.io#/settings).
-
 After your parachain passes the testnet exam, you will need a parachain slot to distribute it and connect to the Relay chain.
 
 ## DEVELOPING A DAPP ON POLKADOT WITH SUBSTRATE 
@@ -140,9 +130,7 @@ The basic tools for developing dApp polkadot consists of:
 * !INK
 * WASM INTERPRETER AND COMPILER WASM
 
-Substrate FRAME is a code library that stores ready-made modules. 
-
-To create a decentralized app on top of it, you need to combine the modules chosen in the framework runtime.
+Substrate FRAME is a code library that stores ready-made modules and to create a decentralized app on top of it, you need to combine the modules chosen in the framework runtime.
 
 ### ATTENTION! To enable smart contract functionality we should add a pallet _contracts pallet.
 ```
@@ -165,8 +153,8 @@ impl pallet_contracts::Trait for Runtime {
     type WeightPrice = pallet_transaction_payment::Module<Self>;
 }
 ```
- For customization, we can add all necessary imports and dependencies. 
- We can either add more custom pallets or develop custom strokes within this pallet and start configuration.
+For customization, we can add all necessary imports and dependencies. 
+We can either add more custom pallets or develop custom strokes within this pallet and start configuration.
 
   ```
 impl_runtime_apis! {
