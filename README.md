@@ -9,7 +9,6 @@ Polkadot is a fast-growing ecosystem that enables cross-chain communication with
 In this tutorial I will explain how to develop and launch your dApp project on Polkadot.
 
 # Prerequisites
-
 In this tutorial we will build a Parachain, dApp and a cross-chain bridge and to create everything we will use different tools at different times.
 
 # Requirements
@@ -42,7 +41,7 @@ The basic tools set for the development of the polkadot parachain consists of:
 
 The first step for development is to set the version of the Substrate framework and the best way is to use Parity Knowledge Base.
 As soon as the environment is ready, you can start editing the code of the parachain model.
-`
+```
 #![cfg_attr(not(feature = "std"), no_std)]
 #![recursion_limit = "256"]
 
@@ -181,22 +180,15 @@ impl_runtime_apis! {
         }
 }
 ```
-  
-To deploy smart contracts for your dApp, there are two leading solutions (Moonbeam and Edgeware) both offering smart contracts running through the Polkadot environment.
+To deploy smart contracts for your dApp, there are two leading solutions (Moonbeam and Edgeware) both offering smart contracts running through the Polkadot environment. If you’ve chosen the EVM Substrate pallet, a Moonbeam smart contract solution is better. 
+Here it is used an interoperable layer containing the current Ethereum toolbox called Frontier is used. Moonbeam will support all contracts written for the EVM environment.
 
-If you’ve chosen the EVM Substrate pallet, a Moonbeam smart contract solution is better. 
-
-In which an interoperable layer containing the current Ethereum toolbox called Frontier is used. Moonbeam will support all contracts written for the EVM environment.
-
-Instead, if you’ve chosen Substrate FRAME, it’s better to use an Edgeware Smart Contract solution. 
-It’s a substrate-based chain that will connect to the relay chain.
-Thanks to its compilation in WASM it allows the execution of smart contracts.
+Instead, if you’ve chosen Substrate FRAME, it’s better to use an Edgeware Smart Contract solution. It’s a substrate-based chain that will connect to the relay chain. Thanks to its compilation in WASM it allows the execution of smart contracts.
   
 ## CREATE A CROSS-CHAIN BRIDGE ON POLKADOT 
 
 Building a cross-chain bridge is a way to connect to the Polkadot ecosystem. 
-
-Creating a cross-chain bridge means that the tokens move between chains or protocols, but in reality it’s all about a smart contract that burns tokens on one chain and minted them on the other.
+Creating this cross-chain bridge means that the tokens move between chains or protocols, but in reality it’s all about a smart contract that burns tokens on one chain and minted them on the other.
 
 ### ATTENTION! To confirm any transaction, the contract requires a signature from a subset of validators.
 
@@ -208,9 +200,7 @@ The basic tools of tools for the development of the bridge consists of:
 * CONVALIDATION PROGRAMME
 
 In the development of the bridge an important part is the validation program, which should take into account the parameter analyzing the number of validators (relays). Another important parameter is the threshold for validators.
- 
 The threshold is the limit of validators needed to approve the transaction. 
- 
 By setting the threshold function it is possible to specify the exact amount of funds that can be transferred from one side to the other per day.
 
 Example of validation method for approval of cross-chain transactions:
@@ -249,15 +239,13 @@ pub fn request_swap(&mut self, transfer_info: SwapMessage) {
         }
     }
 }
-  ```
+```
 Keep in mind that to interact with both sides of the bridge and the smart contracts on it, you’ll need a dApp.
- 
 This is how the end user will transfer funds from one chain to another.
 
 [Attached link for detailed files](https://github.com/bobsub218/How-to-launch-a-project-on-polkadot-Tutorial)
 
 # Conclusion
-
 In this tutorial we’ve seen how to build a parachain on Polkadot and use a substrate-based chain to create a dApp.
 In addition, we also saw the design/construction process of a cross-chain bridge between Ethereum and Polkadot.
  
