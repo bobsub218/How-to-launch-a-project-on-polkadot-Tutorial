@@ -111,7 +111,6 @@ cumulus_runtime::register_validate_block!(Block, Executive);
 ```
 
 Substrate contains all the modules and frames needed for independent chain development, but does not have the required compatibility functionality with Polkadot. So you need to start using the Cumulus library.
-
 Cumulus will add to the library the parachain code required when importing a substrate-based chain and this will make the chain compatible with the Polkadot environment.
 
 If you got here, great, now you need ROCOCO. Because you will have to check your parachain, in fact the testnet ROCOCO, has been created to meet/test all the specifications required(https://polkadot.js.org/apps/?rpc=wss://rococo-rpc.polkadot.io#/settings).
